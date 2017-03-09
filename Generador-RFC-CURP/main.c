@@ -60,6 +60,5 @@ int main(int argc, const char * argv[]) {
 //    
 //    printf("%s", clave_por_fecha);
     generar_clave_homonimia(&clave_homonimia, apellido_paterno, apellido_materno, nombre);
-    
     return 0;
 }

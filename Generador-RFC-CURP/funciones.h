@@ -162,6 +162,119 @@ void generar_clave_por_fecha_nacimiento(char **clave_por_fecha, int anio, char *
     strcat(*clave_por_fecha, numero_dia);
 }
 
+char valor_de_caracter_cuadro2(int numero){
+    char valor;
+    
+    switch (numero) {
+        case 0:
+            valor = '1';
+            break;
+        case 1:
+            valor = '2';
+            break;
+        case 2:
+            valor = '3';
+            break;
+        case 3:
+            valor = '4';
+            break;
+        case 4:
+            valor = '5';
+            break;
+        case 5:
+            valor = '6';
+            break;
+        case 6:
+            valor = '7';
+            break;
+        case 7:
+            valor = '8';
+            break;
+        case 8:
+            valor = '9';
+            break;
+        case 9:
+            valor = 'A';
+            break;
+        case 10:
+            valor = 'B';
+            break;
+        case 11:
+            valor = 'C';
+            break;
+        case 12:
+            valor = 'D';
+            break;
+        case 13:
+            valor = 'E';
+            break;
+        case 14:
+            valor = 'F';
+            break;
+        case 15:
+            valor = 'G';
+            break;
+        case 16:
+            valor = 'H';
+            break;
+        case 17:
+            valor = 'I';
+            break;
+        case 18:
+            valor = 'J';
+            break;
+        case 19:
+            valor = 'K';
+            break;
+        case 20:
+            valor = 'L';
+            break;
+        case 21:
+            valor = 'M';
+            break;
+        case 22:
+            valor = 'N';
+            break;
+        case 23:
+            valor = 'P';
+            break;
+        case 24:
+            valor = 'Q';
+            break;
+        case 25:
+            valor = 'R';
+            break;
+        case 26:
+            valor = 'S';
+            break;
+        case 27:
+            valor = 'T';
+            break;
+        case 28:
+            valor = 'U';
+            break;
+        case 29:
+            valor = 'V';
+            break;
+        case 30:
+            valor = 'W';
+            break;
+        case 31:
+            valor = 'X';
+            break;
+        case 32:
+            valor = 'Y';
+            break;
+        case 33:
+            valor = 'Z';
+            break;
+        default:
+            break;
+    }
+    
+    return valor;
+}
+
 int valor_de_caracter_cuadro1(char caracter){
     int valor_numerico = 0;
     
@@ -294,18 +407,24 @@ void generar_clave_homonimia(char **clave_homonimia, char *apellido_paterno, cha
     eliminar_espacios_blancos(&nombre_completo);
 
     int h = 0;
-    
+    int temp1, temp2;
     for (int i = 0; i < strlen(nombre_completo) - 1; i++) {
-        h += valor_de_caracter_cuadro1(nombre_completo[i])*valor_de_caracter_cuadro1(nombre_completo[i+1]);
+        temp1= valor_de_caracter_cuadro1(nombre_completo[i]);
+        temp2 = valor_de_caracter_cuadro1(nombre_completo[i+1]);
+        h += temp1*temp2;
     }
     
     h += pow(valor_de_caracter_cuadro1(nombre_completo[strlen(nombre_completo)-1]), 2);
-    
     int cociente = (h%1000)/34;
     int residuo = (h%1000)%34;
     
-    printf("%d %d", (h%1000)/34, (h%1000)%34);
+    (*clave_homonimia)[0] = valor_de_caracter_cuadro2(cociente);
+    (*clave_homonimia)[1] = valor_de_caracter_cuadro2(residuo);
+    (*clave_homonimia)[2] = '\0';
+    
 }
+
+void 
 
 
 #endif /* funciones_h */
