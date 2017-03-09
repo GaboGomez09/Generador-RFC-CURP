@@ -25,6 +25,7 @@
 /* Begin PBXFileReference section */
 		C09477681E67FE2100BBD291 /* Generador-RFC-CURP */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Generador-RFC-CURP"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C094776B1E67FE2200BBD291 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		C09477721E68100B00BBD291 /* funciones.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = funciones.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				C094776B1E67FE2200BBD291 /* main.c */,
+				C09477721E68100B00BBD291 /* funciones.h */,
 			);
 			path = "Generador-RFC-CURP";
 			sourceTree = "<group>";
