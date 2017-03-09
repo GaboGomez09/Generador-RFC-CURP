@@ -10,6 +10,7 @@
 #include <string.h>
 #include <ctype.h>
 #include <stdlib.h>
+#include <math.h>
 #include "funciones.h"
 
 char* removerTilde( char* str ) {
@@ -23,25 +24,26 @@ char* removerTilde( char* str ) {
 }
 
 int main(int argc, const char * argv[]) {
-//    char *nombre = (char*)malloc(50*sizeof(char));
-//    char *apellido_paterno = (char*)malloc(50*sizeof(char));
-//    char *apellido_materno = (char*)malloc(50*sizeof(char));
+    char *nombre = (char*)malloc(50*sizeof(char));
+    char *apellido_paterno = (char*)malloc(50*sizeof(char));
+    char *apellido_materno = (char*)malloc(50*sizeof(char));
 //    char *clave_por_nombre = (char*)malloc(10*sizeof(char));
 //    char *clave_por_fecha = (char*)malloc(10*sizeof(char));
 //    int anio = 0;
 //    char *mes = (char*)malloc(15*sizeof(char));
 //    int dia = 0;
+    char *clave_homonimia = (char*)malloc(3);
     //char alfabetoLatinoEstandar[27] = {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','\0'};
     //Esto es porque aunque se omita alguna entrada el 'enter' se registra como un caracter.
     
-//    printf("Apellido Paterno : ");
-//    fgets(apellido_paterno,50,stdin);
-//    
-//    printf("Apellido Materno : ");
-//    fgets(apellido_materno,50,stdin);
-//    
-//    printf("Nombre : ");
-//    fgets(nombre,50,stdin);
+    printf("Apellido Paterno : ");
+    fgets(apellido_paterno,50,stdin);
+    
+    printf("Apellido Materno : ");
+    fgets(apellido_materno,50,stdin);
+    
+    printf("Nombre : ");
+    fgets(nombre,50,stdin);
     
 //    printf("Anio en que nacio: ");
 //    scanf("%d", &anio);
@@ -57,7 +59,7 @@ int main(int argc, const char * argv[]) {
 //    generar_clave_por_fecha_nacimiento(&clave_por_fecha, anio, mes, dia);
 //    
 //    printf("%s", clave_por_fecha);
-    
+    generar_clave_homonimia(&clave_homonimia, apellido_paterno, apellido_materno, nombre);
     
     return 0;
 }
