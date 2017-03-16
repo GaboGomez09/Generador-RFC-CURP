@@ -23,6 +23,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C07C6DF91E72575200BD2802 /* paises.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = paises.txt; sourceTree = "<group>"; };
 		C09477681E67FE2100BBD291 /* Generador-RFC-CURP */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Generador-RFC-CURP"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C094776B1E67FE2200BBD291 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		C09477721E68100B00BBD291 /* funciones.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = funciones.h; sourceTree = "<group>"; };
@@ -59,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				C094776B1E67FE2200BBD291 /* main.c */,
+				C07C6DF91E72575200BD2802 /* paises.txt */,
 				C09477721E68100B00BBD291 /* funciones.h */,
 			);
 			path = "Generador-RFC-CURP";
@@ -248,6 +250,7 @@
 				C09477711E67FE2200BBD291 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

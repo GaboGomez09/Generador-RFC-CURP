@@ -27,14 +27,12 @@ int main(int argc, const char * argv[]) {
     char *nombre = (char*)malloc(50*sizeof(char));
     char *apellido_paterno = (char*)malloc(50*sizeof(char));
     char *apellido_materno = (char*)malloc(50*sizeof(char));
-//    char *clave_por_nombre = (char*)malloc(10*sizeof(char));
-//    char *clave_por_fecha = (char*)malloc(10*sizeof(char));
-//    int anio = 0;
-//    char *mes = (char*)malloc(15*sizeof(char));
-//    int dia = 0;
+    char *clave_por_nombre = (char*)malloc(10*sizeof(char));
+    char *clave_por_fecha = (char*)malloc(10*sizeof(char));
+    int anio = 0;
+    char *mes = (char*)malloc(15*sizeof(char));
+    int dia = 0;
     char *clave_homonimia = (char*)malloc(3);
-    //char alfabetoLatinoEstandar[27] = {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','\0'};
-    //Esto es porque aunque se omita alguna entrada el 'enter' se registra como un caracter.
     
     printf("Apellido Paterno : ");
     fgets(apellido_paterno,50,stdin);
@@ -45,20 +43,21 @@ int main(int argc, const char * argv[]) {
     printf("Nombre : ");
     fgets(nombre,50,stdin);
     
-//    printf("Anio en que nacio: ");
-//    scanf("%d", &anio);
-//    
-//    printf("Mes en que nacio: ");
-//    scanf("%s", mes);
-//    
-//    printf("Dia en que nacio: ");
-//    scanf("%d", &dia);
+    printf("Anio en que nacio: ");
+    scanf("%d", &anio);
     
-//    generar_codigo_clave_por_nombre(&clave_por_nombre, apellido_paterno, apellido_materno, nombre);
+    printf("Mes en que nacio: ");
+    scanf("%s", mes);
     
-//    generar_clave_por_fecha_nacimiento(&clave_por_fecha, anio, mes, dia);
-//    
-//    printf("%s", clave_por_fecha);
+    printf("Dia en que nacio: ");
+    scanf("%d", &dia);
+    
+    generar_codigo_clave_por_nombre(&clave_por_nombre, apellido_paterno, apellido_materno, nombre);
+    
+    generar_clave_por_fecha_nacimiento(&clave_por_fecha, anio, mes, dia);
+    
     generar_clave_homonimia(&clave_homonimia, apellido_paterno, apellido_materno, nombre);
+    
+    printf("Clave por nombre: %s\nClave por fecha: %s\nClave homonimia: %s\n", clave_por_nombre, clave_por_fecha, clave_homonimia);
     return 0;
 }

@@ -56,7 +56,6 @@ void generar_codigo_clave_por_nombre(char **clave_por_nombre, char *apellido_pat
         (*clave_por_nombre)[2] = toupper(apellido_materno[0]);
         (*clave_por_nombre)[3] = toupper(nombre[0]);
         (*clave_por_nombre)[4] = '\0';
-        printf("Clave por nombre: %s\n", (*clave_por_nombre));
     }else if(strlen(apellido_paterno) == 1){
         //Tiene solo apellido materno
         
@@ -424,7 +423,9 @@ void generar_clave_homonimia(char **clave_homonimia, char *apellido_paterno, cha
     
 }
 
-void 
+void generar_clave_pais(){
+    
+}
 
 
 #endif /* funciones_h */
